@@ -1,2 +1,2 @@
 language = "bash"
-run = "node bot.js"
+run = "node index.js"

@@ -5,6 +5,9 @@ Usefull links -
   Xbox API - https://xboxapi.com/documentation
   To interact with the Xbox API - https://github.com/bendl/node-xbox
 */
+
+function bot(){
+
 require('dotenv').config(); // Module for getting variables from secret .env file
 var fs = require('fs');
 var https = require('https');
@@ -149,3 +152,6 @@ function help(msg, local) { // Shows commands a user can run or specific command
 
 }
     
+}
+
+module.exports = bot; // Export bot()
