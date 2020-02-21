@@ -1,7 +1,7 @@
 var colors = require('colors'); // Console colors library
 const express = require('express'); // Website library
 const app = express(); // Start express
-const port = 3000; // Start express on specifc port
+const port = process.env.PORT || 3000; // Start express on specifc port
 function website(){
 
 app.use(express.static('public')) // Set public directory as website
