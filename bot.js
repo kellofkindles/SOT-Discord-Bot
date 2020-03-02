@@ -25,10 +25,10 @@ client.login(process.env.LOGIN) // Logs in the bot using secret token
 const msgRelay = new Discord.Client(); // Message relay bot
 msgRelay.login(process.env.MSGRELAY);
 msgRelay.on('ready', () => {
-  console.log(`Logged in as ${msgRelay.user.tag}!`.blue);
+  console.log(`Logged in as ${msgRelay.user.tag}!`.brightGreen);
 })
 client.on('ready', () => {
-        console.log(`Logged in as ${client.user.tag}!`.yellow); // Note the backticks here - this lets us include evaluations with "${}"
+        console.log(`Logged in as ${client.user.tag}!`.brightYellow); // Note the backticks here - this lets us include evaluations with "${}"
     });
     const prefix = "!"
 
@@ -78,7 +78,7 @@ rl.on('line', (input) => {
 // commands.helprun === undefined
 
 client.on("message", function(msg) {
-  console.log(msg.content.green)
+  console.log(msg.content.brightYellow)
         var cmd = msg.content.replace(prefix, "").split(" ")[0]; // Remove the prefix and options
         if (msg.content.startsWith(prefix) && msg.author != client.user && commands[cmd] && msg.member.hasPermission(commands[cmd].require)) { // Only continue if the message starts with the prefix and the bot didn't send the message and it is a command and the user has permission to run it
             commands[cmd].run(msg); // Run function linked to a command
